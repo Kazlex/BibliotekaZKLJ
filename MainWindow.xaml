@@ -1,0 +1,39 @@
+﻿<Window x:Class="BibliotekaZKLJ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BibliotekaZKLJ"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" FontSize="33">
+    <TabControl >
+        <TabItem Header="Porudzbina">
+            
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
+                    <Button Margin="10 0 0 0" Width="100" Click="Kupi">Kupi</Button>
+                </StackPanel>
+                
+                <DataGrid Name="dg" IsReadOnly="True" ColumnWidth="*" AutoGenerateColumns="False">
+                </DataGrid>
+            </DockPanel>
+        </TabItem>
+        
+        <TabItem Header="Nalog">
+            
+            <UniformGrid Rows="2">
+                <ListBox></ListBox>
+                <Button Click="Registracija" >Registracija</Button>
+            </UniformGrid> 
+        </TabItem>
+        
+        <TabItem Header="Vreme vracanja">
+            <Button Content="Vreme" Click="Vreme"></Button>
+        </TabItem>
+        
+        <TabItem Header="Lokacija">
+            <Image Source="F:\Image\biblioteka.png"></Image>
+        </TabItem>
+        
+    </TabControl>
+</Window>
